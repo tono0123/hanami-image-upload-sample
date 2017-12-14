@@ -1,0 +1,13 @@
+<h1><%= image.name %></h1>
+<p><%= image.description %></p>
+
+<img src="<%= image.image_url(:original) %>" />
+
+<p>
+  <%= form_for :image, routes.image_path(id: image.id), method: :delete, values: {image: image} do
+        submit 'delete'
+      end
+  %>
+</p>
+
+<%= link_to 'All', routes.images_path %>

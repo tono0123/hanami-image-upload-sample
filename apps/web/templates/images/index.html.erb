@@ -1,0 +1,12 @@
+<% images.each do |image| %>
+<ul>
+  <li><%= image.name %></li>
+  <li><%= image.description %></li>
+  <li><img src="<%= image.image_url(:original) %>" /></li>
+  <li>
+      <%= link_to 'Show', routes.image_path(id: image.id) %>
+  </li>
+</ul>
+<% end %>
+
+<%= link_to 'New image', routes.new_image_path %>

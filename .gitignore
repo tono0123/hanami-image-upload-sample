@@ -1,0 +1,4 @@
+/db/hanami-shrine_development
+/db/hanami-shrine_test
+/public/uploads
+.env*
